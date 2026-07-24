@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-ai-core"
+version = "1.0.0"
+description = "Enterprise-grade Python framework for AI Chatbots, AI Agents, Tool Calling, MCP Integration and AI Applications."
+readme = "README.md"
+authors = [{ name = "Enterprise AI Team", email = "dev@enterprise-ai.core" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.5.0",
+    "asyncio>=3.4.3",
+    "aiohttp>=3.8.0",
+]
+
+[project.optional-dependencies]
+fastapi = ["fastapi>=0.100.0", "uvicorn>=0.22.0"]
+grpc = ["grpcio>=1.50.0", "protobuf>=4.21.0"]
+redis = ["redis>=4.5.0"]
+kafka = ["aiokafka>=0.8.0"]
+rabbitmq = ["aio-pika>=9.0.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.0.250",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["enterprise_ai_core*"]
