@@ -39,6 +39,39 @@ if __name__ == "__main__":
 - **Event-Driven Messaging**: Support for InMemory, Apache Kafka, and RabbitMQ event buses.
 - **Extensible Storage & Caching**: TTL memory cache, Redis distributed caching, and session windows.
 
+## 📚 Documentation & System Diagrams Index
+
+### 📐 System Architecture & Flow Diagrams
+- [System Architecture Specification](docs/SystemArchitecture.md) — Clean Architecture layers, subsystem integration diagrams.
+- [System Flow Diagrams](docs/FlowDiagrams.md) — Sequence & flowcharts for end-to-end chat, guardrails pipeline, model routing, and lifecycle events.
+- [Architecture Layers](docs/Architecture.md) — High-level clean architecture layers.
+
+### 🛡️ Guardrails & Security Engine
+- [Guardrails Engine Architecture](docs/Guardrails.md) — 6-stage execution pipeline specification.
+- [Prompt Injection Defense](docs/PromptInjection.md) — Jailbreak detection and threat vector mitigation.
+- [Tool Security & Authorization](docs/ToolSecurity.md) — RBAC, tool whitelisting/blacklisting.
+- [PII & Secret Protection](docs/PIIProtection.md) — Automated SSN, email, phone, and credential scrubbing.
+- [Security Policies](docs/SecurityPolicies.md) — Policy configuration, token limits, and compliance enforcement.
+- [Compliance & Audit Logging](docs/Compliance.md) — SOC2, HIPAA, and GDPR audit event schemas.
+
+### ⚙️ Governance, Routing & Management
+- [Enterprise Model Routing](docs/ModelRouting.md) — Multi-provider routing, priority, and automatic failover.
+- [AI Governance & Policy Engine](docs/Governance.md) — Centralized policy engine, feature flags, and environment profiles.
+- [Enterprise Context Engine](docs/ContextEngine.md) — Priority token budgeting and context envelope management.
+- [Token Management](docs/TokenManagement.md) — Context window allocation and priority token optimization.
+- [Prompt Templates & Best Practices](docs/PromptTemplates.md) — Dynamic prompt templates and variables.
+
+### 📦 Module Technical Documentation
+- [Agent Module (`agent`)](docs/Module_Agent.md) — `EnterpriseAgent`, `AgentBuilder`, steps, and execution tracing.
+- [LLM Module (`llm`)](docs/Module_LLM.md) — Drivers for Gemini, Azure OpenAI, OpenAI, Ollama, and Anthropic.
+- [Tools & MCP Module (`tools` & `mcp`)](docs/Module_Tools_MCP.md) — `@tool` decorator, schema generator, registry, and MCP client.
+- [Memory & Cache Module (`memory` & `cache`)](docs/Module_Memory_Cache.md) — Conversation memory, TTL cache, and Redis driver.
+- [Messaging & gRPC Module (`messaging` & `grpc`)](docs/Module_Messaging_GRPC.md) — Event buses (Kafka, RabbitMQ, InMemory) and gRPC handlers.
+- [Resiliency & Model Routing Module (`resiliency` & `routing`)](docs/Module_Resiliency_Routing.md) — Circuit breaker, exponential backoff retries, and router.
+- [Diagnostics & AI Evaluation Module (`diagnostics` & `eval`)](docs/Module_Diagnostics_Eval.md) — System health diagnostics and AI evaluation framework.
+- [Extension SDK & Lifecycle Module (`extension_sdk` & `lifecycle`)](docs/Module_Extension_SDK_Lifecycle.md) — Framework plugins and lifecycle event bus hooks.
+- [RAG & Vector Search Module (`rag`)](docs/Module_RAG.md) — Document extractor and vector embedding store.
+
 ## 📁 Repository Structure
 
 ```

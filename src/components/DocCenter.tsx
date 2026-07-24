@@ -5,7 +5,9 @@ export const DocCenter: React.FC = () => {
   const [selectedDoc, setSelectedDoc] = useState('README.md');
 
   const docList = [
-    { name: 'README.md', path: 'README.md', desc: 'Framework Quickstart & Installation' },
+    { name: 'README.md', path: 'README.md', desc: 'Framework Overview & Documentation Index' },
+    { name: 'SystemArchitecture.md', path: 'docs/SystemArchitecture.md', desc: 'Clean Architecture Layers & Subsystem Specification' },
+    { name: 'FlowDiagrams.md', path: 'docs/FlowDiagrams.md', desc: 'System Sequence & Flowchart Diagrams' },
     { name: 'ModelRouting.md', path: 'docs/ModelRouting.md', desc: 'Enterprise Model Routing, Provider Priority & Failover' },
     { name: 'Governance.md', path: 'docs/Governance.md', desc: 'AI Policy Engine, Feature Flags & Environment Profiles' },
     { name: 'Guardrails.md', path: 'docs/Guardrails.md', desc: 'Guardrails Engine Pipeline Architecture' },
@@ -14,7 +16,12 @@ export const DocCenter: React.FC = () => {
     { name: 'ToolSecurity.md', path: 'docs/ToolSecurity.md', desc: 'Tool Security & Role Authorization' },
     { name: 'PIIProtection.md', path: 'docs/PIIProtection.md', desc: 'PII & Secret Leakage Auto-Redaction' },
     { name: 'Compliance.md', path: 'docs/Compliance.md', desc: 'Enterprise Compliance & Audit Logging' },
-    { name: 'ContextEngine.md', path: 'docs/ContextEngine.md', desc: 'Enterprise Context Management Engine & Architecture' },
+    { name: 'Module_Agent.md', path: 'docs/Module_Agent.md', desc: 'Agent Engine & Builder Architecture' },
+    { name: 'Module_LLM.md', path: 'docs/Module_LLM.md', desc: 'LLM Driver Specification (Gemini, Azure, OpenAI, Ollama)' },
+    { name: 'Module_Tools_MCP.md', path: 'docs/Module_Tools_MCP.md', desc: 'Tool Registry & Model Context Protocol' },
+    { name: 'Module_Memory_Cache.md', path: 'docs/Module_Memory_Cache.md', desc: 'Conversation Memory & Redis Caching' },
+    { name: 'Module_Resiliency_Routing.md', path: 'docs/Module_Resiliency_Routing.md', desc: 'Circuit Breaker, Retries & Model Router' },
+    { name: 'Module_Diagnostics_Eval.md', path: 'docs/Module_Diagnostics_Eval.md', desc: 'Diagnostics Engine & AI Evaluation Benchmarks' },
   ];
 
   return (
